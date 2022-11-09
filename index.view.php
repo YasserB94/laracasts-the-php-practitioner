@@ -6,6 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,6 +37,31 @@
                 <th>GENDER</th>
             </tr>
             <?php foreach ($persons as $person => $traits) : ?>
+                <tr>
+                    <td><?= $person ?></td>
+                    <?php foreach ($traits as $trait => $value) : ?>
+                        <?php
+                        $valueType = gettype($value);
+                        if ($valueType == "string" || $valueType == "integer" || $valueType == "double") : ?>
+                            <td><?= $value ?></td>
+                        <?php else : ?>
+                            <td>Unknown</td>
+                        <?php endif ?>
+                    <?php endforeach ?>
+                </tr>
+            <?php endforeach ?>
+        </table>
+    <?php endif ?>
+    <!--SAME AFTER RUNNING TROUGH FORMATTED-->
+    <?php if (isset($formattedPersons) && count($formattedPersons) > 0) : ?>
+        <table style="text-align: center;">
+            <caption>Creating a PHP Function</caption>
+            <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>GENDER</th>
+            </tr>
+            <?php foreach ($formattedPersons as $person => $traits) : ?>
                 <tr>
                     <td><?= $person ?></td>
                     <?php foreach ($traits as $trait => $value) : ?>
