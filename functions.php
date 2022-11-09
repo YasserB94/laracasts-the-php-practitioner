@@ -9,5 +9,7 @@ function formatPersons(array $persons): array
     }
     return $formatted;
 }
-
-
+function dd($x){
+    echo '<pre>';
+    die(var_dump($x));
+}

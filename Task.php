@@ -22,15 +22,6 @@ class Task {
     {
         return $this->id;
     }
-
-    /**
-     * @param int $id
-     */
-    public function setId(int $id): void
-    {
-        $this->id = $id;
-    }
-
     /**
      * @return string
      */
@@ -38,7 +29,6 @@ class Task {
     {
         return $this->description;
     }
-
     /**
      * @param string $description
      */
@@ -54,7 +44,9 @@ class Task {
     {
         return $this->completed;
     }
-
+    public function complete():void{
+        $this->completed = true;
+    }
     /**
      * @param bool $completed
      */
@@ -62,6 +54,4 @@ class Task {
     {
         $this->completed = $completed;
     }
-
-
 }
