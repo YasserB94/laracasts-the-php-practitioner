@@ -9,19 +9,15 @@
 
 </head>
 <body>
-    <?php $i=1; foreach($tasks as $task):?>
-    <?php if ($task->isCompleted()):?>
-    <li
-    <?php
-    if($task->isCompleted()){
-        echo "style = \"text-decoration: line-through; color:green;\"";
-    }endif
-    ?>
-    >
-        <h2>Task #<?=$i?></h2>
-        <?=$task->getDescription()?>
-    </li>
-    <?php $i++; endforeach; $i=null;?>
+    <ul>
+        <?php foreach ($tasks as $task):?>
+            <li>
+                <span <?php if($task->isCompleted()) {echo "style=\"text-decoration: line-through\"";}; ?>>
+                    <?=$task->getDescription()?>
+                </span>
+            </li>
+        <?php endforeach;?>
+    </ul>
 </body>
 
 </html>

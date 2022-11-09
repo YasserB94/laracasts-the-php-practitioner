@@ -1,6 +1,24 @@
 # The PHP Practitioner
 Fully refreshing php from scratch to prepare for Laravel development, using Laracast's 'The PHP Practitioner' course.
+## Use this repository for yourself
+If for any reason you would like to use this repository to practice your PHP please follow these steps
 
+### 1. Config.php
+Create a config.php file in the root of the project to set sensitive information
+```php
+<?php
+return [
+    'database' =>[
+        'DB_HOST'=>'your.host.adress',
+        'DB_NAME'=>'your.db.name',
+        'DB_USER'=>'your.db.username',
+        'DB_SECRET'=>'IloveMOM>9000',
+        'DB_OPTIONS'=>[]
+    ],
+];
+```
+
+## NOTES
 ## SQL 101 Database
 Notes on created database to follow along the course.
 
@@ -38,4 +56,4 @@ All of the above is easier done with tools like:
 - Navicat // ?
 - Datagrip //PAID
 
-TODO:: C
+## PDO 

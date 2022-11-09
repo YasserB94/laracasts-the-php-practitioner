@@ -1,15 +1,5 @@
 <?php
-function formatPersons(array $persons): array
-{
-    $formatted = [];
-    foreach ($persons as $person => $traits) {
-        foreach ($traits as $trait => $value) {
-            gettype($value) && $formatted[ucfirst(strtolower($person))][$trait] = ucfirst(strtolower($value));
-        }
-    }
-    return $formatted;
-}
-function dd($x){
+function dd($dumpData){
     echo '<pre>';
-    die(var_dump($x));
+    var_dump($dumpData);
 }

@@ -1,20 +1,14 @@
 <?php
 class Task {
-    private int $id;
-    private string $description;
-    private bool $completed;
+    public int $id;
+    public string $description;
+    public bool $completed;
 
     /**
      * @param int $id
      * @param string $description
      * @param bool $completed
      */
-    public function __construct(string $description)
-    {
-        $this->description = $description;
-        $this->completed = false;
-    }
-
     /**
      * @return int
      */
@@ -22,19 +16,13 @@ class Task {
     {
         return $this->id;
     }
+
     /**
      * @return string
      */
     public function getDescription(): string
     {
         return $this->description;
-    }
-    /**
-     * @param string $description
-     */
-    public function setDescription(string $description): void
-    {
-        $this->description = $description;
     }
 
     /**
@@ -44,14 +32,6 @@ class Task {
     {
         return $this->completed;
     }
-    public function complete():void{
-        $this->completed = true;
-    }
-    /**
-     * @param bool $completed
-     */
-    public function setCompleted(bool $completed): void
-    {
-        $this->completed = $completed;
-    }
+
+
 }

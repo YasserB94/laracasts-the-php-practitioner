@@ -1,0 +1,7 @@
+.env.local
+.env
+
+
+#TMP LEARNING ENV CONFIG
+config.php
+./config.php
