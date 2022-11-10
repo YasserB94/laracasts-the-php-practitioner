@@ -1,6 +1,7 @@
 .env.local
 .env
 
+node_modules
 
 #TMP LEARNING ENV CONFIG
 config.php
