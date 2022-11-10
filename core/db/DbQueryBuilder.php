@@ -1,5 +1,6 @@
 <?php
 
+
 class DbQueryBuilder
 {
     private PDO $pdo;
@@ -13,10 +14,11 @@ class DbQueryBuilder
     }
 
 
-    public function selectAll(string $table,string $class):array{
+    public function selectAll(string $table, string $class): array
+    {
         $query = "SELECT * FROM ${table}";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
-        return $statement->fetchAll(PDO::FETCH_CLASS,$class);
+        return $statement->fetchAll(PDO::FETCH_CLASS, $class);
     }
 }
