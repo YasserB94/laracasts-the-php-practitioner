@@ -4,7 +4,9 @@ Fully refreshing php from scratch to prepare for Laravel development, using Lara
 If for any reason you would like to use this repository to practice your PHP please follow these steps
 
 ### 1. Config.php
-Create a config.php file in the root of the project to set sensitive information
+- Create a config.php file in the root of the project to set sensitive information.
+- Setup the database as described below
+- Install the node modules for TailwindCSS
 ```php
 <?php
 return [

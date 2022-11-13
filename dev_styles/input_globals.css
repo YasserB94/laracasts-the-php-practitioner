@@ -7,6 +7,13 @@ body{
     bg-slate-800
     text-slate-50
 }
+a{
+    @apply
+    duration-500
+    underline-offset-4
+    hover:text-orange-300
+    hover:underline
+}
 nav{
     @apply
     w-full
@@ -20,6 +27,8 @@ nav ul{
 nav ul li{
     @apply
     p-4
+    text-2xl
+
 }
 main{
     @apply

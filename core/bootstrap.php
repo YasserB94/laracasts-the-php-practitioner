@@ -1,13 +1,20 @@
 <?php
-$app = [];
 
-$app['config'] = require 'config.php';
-require 'core/Router.php';
-require 'core/Request.php';
 
-require 'core/db/DbConnection.php';
-require 'core/db/DbQueryBuilder.php';
-$app['database'] = new DbQueryBuilder(DbConnection::make($app['config']['database']));
+use App\Core\App;
+App::bind('config',require 'config.php');
+App::bind('database',
+    new DbQueryBuilder(
+        DbConnection::make(
+            App::get('config')['database']
+        )
+    )
+);
 
-require "models/Task.php";
-
+function view(string $name,array $data =[]){
+    extract($data);
+    return require "app/views/${name}.view.php";
+}
+function redirect(string $path){
+    header("Location: /${path}");
+}

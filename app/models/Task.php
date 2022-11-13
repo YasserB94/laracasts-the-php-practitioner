@@ -1,4 +1,5 @@
 <?php
+namespace App\Models;
 class Task {
     public int $id;
     public string $description;
